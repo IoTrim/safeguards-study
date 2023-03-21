@@ -14,7 +14,8 @@ The code needs Mon(IoT)r installed. Please download and install the software her
 
 For each threat we create a subdirectory showing samples of:
 * Threat Simulation Scripts: for running the threat 
-* Threat Detection Scripts: to understand the detection capabilities of a safeguard with respect to the simulated threats. 
+* Threat Detection Scripts: to understand the detection capabilities of a safeguard with respect to the simulated threats
+For each threat we include both the Threat Simulation Script and the Threat Detection script in the appropriate folder.  
 
 `anomalous_on_off` - Code for emulating the situation in which a compromised device is switched on and off continuously.
 
