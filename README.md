@@ -17,3 +17,5 @@ For each threat we create a subdirectory showing samples of:
 * Threat Detection Scripts: to understand the detection capabilities of a safeguard with respect to the simulated threats. 
 
 `anomalous_on_off` - Code for emulating the situation in which a compromised device is switched on and off continuously.
+
+`anomalous_traffic` - Code for producing synthetic traffic that does not conform to the typical traffic of an IoT device. In the example we emulate an Google Home traffic as being produced by an Echo Spot. First, we collect normal traffic produced by an Echo Spot while interacting with the device normally, including asking different questions. From the IoT bridge we then spoof source IP address, MAC address, and inject the Echo Spot traffic to the safeguard as if the Echo Spot is sending traffic as Google Home.
