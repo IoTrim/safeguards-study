@@ -10,7 +10,7 @@ As discussed in Section 4 of the paper, we use threat simulation scripts that ar
 HOW TO RUN THE SOFTWARE
 ## File Structure 
 
-The code needs Mon(IoT)r installed. Please download and install the software here: https://moniotrlab.ccis.neu.edu/tools/
+The code needs Mon(IoT)r installed. Please download and install the software here: https://moniotrlab.ccis.neu.edu/tools/ [TODO: Download and add the code of moniotr here]
 
 For each threat we create a subdirectory showing samples of:
 * Threat Simulation Scripts: for running the threat 
