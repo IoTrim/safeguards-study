@@ -1,0 +1,11 @@
+b0:be:76:c1:ac:6a tplink-plug-pow1 yi-camera google-home allure-speaker
+68:ff:7b:a6:13:d tplink-plug-pow9 reolink-cam-wired
+d8:d:17:56:b1:76 tplink-plug-pow2 xiaomi-ricecooker
+d8:d:17:56:a9:81 tplink-plug-pow3
+d8:d:17:86:1:4a tplink-plug-pow4 switchbot-hub
+b0:be:76:c1:a3:86 tplink-plug-pow5
+b0:be:76:c1:ac:e tplink-plug-pow6 smartthings-hub appkettle
+68:ff:7b:71:90:7 tplink-plug-pow11
+68:ff:7b:95:8:6d tplink-plug-pow8 tplink-bulb tplink-plug2 blink-security-hub
+68:ff:7b:71:8f:89 tplink-plug-pow7
+68:ff:7b:95:8:5e tplink-plug-pow10

@@ -1,0 +1,104 @@
+#!/bin/bash
+
+##
+#  Switch the TP-LINK HS10x wlan smart plug on and off
+##
+#  Based on https://github.com/ggeorgovassilis/linuxscript
+
+CURRENT_DIR="$(dirname "$(readlink -f "$0")")"
+
+ip=$1
+cmd=$2
+conf=$CURRENT_DIR/kasa-power.txt
+
+check_binaries() {
+  command -v nc >/dev/null 2>&1 || { echo >&2 "The nc programme for sending data over the network isn't in the path, communication with 
+the plug will fail"; exit 2; }
+  command -v base64 >/dev/null 2>&1 || { echo >&2 "The base64 programme for decoding base64 encoded strings isn't in the path, decoding 
+of payloads will fail"; exit 2; }
+  command -v od >/dev/null 2>&1 || { echo >&2 "The od programme for converting binary data to numbers isn't in the path, the status and 
+emeter commands will fail";}
+  command -v read >/dev/null 2>&1 || { echo >&2 "The read programme for splitting text into tokens isn't in the path, the status and 
+emeter commands will fail";}
+  command -v printf >/dev/null 2>&1 || { echo >&2 "The printf programme for converting numbers into binary isn't in the path, the status 
+and emeter commands will fail";}
+  command -v jq >/dev/null 2>&1 || { echo >&2 "The jq programme for parsing JSON isn't in the path, the query command will fail";}
+}
+
+# base64 encoded data to send to the plug to switch it on
+payload_on="AAAAKtDygfiL/5r31e+UtsWg1Iv5nPCR6LfEsNGlwOLYo4HyhueT9tTu36Lfog=="
+
+# base64 encoded data to send to the plug to switch it off
+payload_off="AAAAKtDygfiL/5r31e+UtsWg1Iv5nPCR6LfEsNGlwOLYo4HyhueT9tTu3qPeow=="
+
+# base64 encoded data to send to the plug to query it
+payload_query="AAAAI9Dw0qHYq9+61/XPtJS20bTAn+yV5o/hh+jK8J7rh+vLtpbr"
+
+reportfailure() {
+   echo "Failure: $1"
+   exit 1
+}
+
+usage() {
+   echo "Usage: $0 <ip|mac|name> <on|off>"
+   exit 1
+}
+
+checkarg() {
+ name="$1"
+ value="$2"
+
+ if [ -z "$value" ]; then
+    echo "Failure: missing argument $name"
+    usage
+ fi
+
+ if [[ "$name" == "command" ]] && [[ "$value" != "on" ]] && [[ "$value" != "off" ]]; then
+    echo "Failure: command must be either 'on' or 'off'"
+    usage
+ fi
+}
+
+checkargs() {
+  checkarg "ip" $ip
+  checkarg "command" $cmd
+}
+
+sendtoplug() {
+  dest="$1"
+
+  if [[ "$dest" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+     ip="$1"
+  elif [ -f "$conf" ]; then
+     mac=`cat kasa-power.txt | grep -w $dest | head -n 1 | cut -f 1 -d " "`
+     [ -z "$mac" ] && reportfailure "destination not valid (cannot be found on kasa-power.txt)"
+     macalt=`echo $mac | sed 's/\b\(\w\)\b/0\1/g'`
+     ip=`arp | grep $macalt | cut -f 1 -d " "`
+     [ -z "$ip" ] && reportfailure "device $dest ($mac) is not currently connected"
+     [ "$mac" == "$dest" ] && dest="$ip ($mac)" || dest="$ip ($dest/$mac)"
+  else
+     reportfailure "destination not valid (kasa-power.txt does not exist)"
+  fi
+  payload="$2"
+  echo "Turning $3 device $dest"
+  echo -n "$payload" | base64 -d | nc -q 0 $ip 9999 &> /dev/null || reportfailure "couldn''t connect to $ip:$port, nc failed with exit 
+code $?"
+}
+
+##
+#  Main programme
+##
+check_binaries
+checkargs
+case "$cmd" in
+  on)
+  sendtoplug $ip "$payload_on" $cmd
+  ;;
+  off)
+  sendtoplug $ip "$payload_off" $cmd
+  ;;
+  *)
+  usage
+  ;;
+esac
+exit 0
