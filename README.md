@@ -15,7 +15,7 @@ HOW TO RUN THE SOFTWARE
 ## File Structure 
 
 The code needs a modified version of Mon(IoT)r installed. Please download and install the software (moniotr) in this repository. 
-[Mon(IoT)r](https://moniotrlab.ccis.neu.edu/tools/) allows traffic monitoring and customized experiments with IoT devices. 
+[Mon(IoT)r](https://moniotrlab.ccis.neu.edu/tools/) allows traffic monitoring and customized experimentation with IoT devices. 
 
 For each threat we create a subdirectory showing samples of:
 * Threat Simulation Scripts: for running the threat 
