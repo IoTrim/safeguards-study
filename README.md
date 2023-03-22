@@ -7,11 +7,8 @@ As discussed in Section 4 of the paper, we use threat simulation scripts that ar
 
 <img src="https://github.com/IoTrim/safeguards-study/blob/main/table.png" width="500"/>
 
-Data are stored [here] (https://liveuclac-my.sharepoint.com/:f:/g/personal/uceeam9_ucl_ac_uk/El87b_6c8pVNkiAoapE1y2EBU2Arvgse5tB1HYNTVkHqzw?e=hqr3l7)
+Data are stored [here](https://liveuclac-my.sharepoint.com/:f:/g/personal/uceeam9_ucl_ac_uk/El87b_6c8pVNkiAoapE1y2EBU2Arvgse5tB1HYNTVkHqzw?e=hqr3l7)
 The folder contains one subfolder for each safeguard we tested containing their packet captures for all the duration of our experiments.  
-
-[This is an external link to genome.gov](https://www.genome.gov/)
-
 
 HOW TO RUN THE SOFTWARE
 ## File Structure 
