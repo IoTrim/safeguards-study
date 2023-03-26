@@ -1,7 +1,7 @@
 # Purpose of the code
 This code demonstrates two methods of os scanning on a target IP address. 
 
-This code needs to be run in the <b>Gateway</b> and in the <b>IoT Bridge<b>.
+This code needs to be run in the <b>Gateway</b> and in the <b>IoT Bridge</b>.
 
 ## Requirements
 - Nmap tool (can be installed with sudo apt-get install nmap on Linux systems)
