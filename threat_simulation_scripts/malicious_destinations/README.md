@@ -1,7 +1,7 @@
 # Purpose of the code
 This script uses the sys module and the http.client module to make an HTTP GET request to a specified malicious destination (in easylist.txt). The destination is passed to the script as a command-line argument when the script is executed. The script prints the destination, status code, and reason phrase to the console using the print statement.
 
-This code needs to be run in the <b>IoT Bridge<b>.
+This code needs to be run in the <b>IoT Bridge</b>.
 
 
 ## How to use the code
