@@ -46,7 +46,7 @@ Moreover, similar to the gateway, the IoT bridge is responsible for running  thr
 Due to the privileged role as a Layer-2 bridge, we use the IoT bridge to perform attacks that require spoofing, for example by producing network traffic on behalf of other IoT devices in the same network by spoofing their IP addresses and MAC addresses.
 
 <b>Android Phone</b>
-We use an Android phone to understand if the safeguards are operating normally (i.e., they report an ``online'' or ``ready'' status), 
+We use an Android phone to understand if the safeguards are operating normally (i.e., they report an "online or "ready" status), 
 and to understand if and when safeguards detect threats via their companion app using threat detection scripts.
 The Android phone is connected via USB to the gateway, which offers programmatic control via ADB, thus allowing the execution of threat detection scripts.
 The Android phone is connected to the LAN (i.e., the network that connects the gateway to the safeguard).
