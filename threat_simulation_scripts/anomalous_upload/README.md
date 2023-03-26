@@ -1,7 +1,7 @@
 # Purpose of the code
 This is a Bash script designed to automatically inject camera traffic (peak traffic), and pause for a set time to allow for detection of the threat from the safeguard.
 
-This code needs to be run in the <b>IoT Bridge<b>.
+This code needs to be run in the <b>IoT Bridge</b>.
 
 ## How to use the code
 
