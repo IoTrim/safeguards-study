@@ -1,4 +1,6 @@
 import http.client
+import time
+import subprocess
 
 # Define the HTTP server and endpoint
 server = 'www.example.com'
@@ -39,3 +41,9 @@ response = conn.getresponse()
 
 # Print the response data
 print(response.read())
+
+# Pause program for 20 minutes to allow the safeguard to detect the threat
+time.sleep(1200)
+
+# Call the detection script for safeguard arg1
+subprocess.call(['bash', 'privacy_detection.sh', 'arg1'])
