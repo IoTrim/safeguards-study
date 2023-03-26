@@ -1,6 +1,6 @@
 # Purpose of the code
 This Bash script is designed to run a power experiment on an IoT device and store the pcap of the experiment in a specific directory. It also stores the result of the detection from the safeguard.
-This code needs to be run in the <b>Gateway</b>.
+This code needs to be run in the <b>IoT Bridge<b>.
 
 ## How to use the code
 

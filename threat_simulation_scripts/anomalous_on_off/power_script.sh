@@ -23,6 +23,8 @@ name="$3"
         /opt/moniotr/bin/tag-experiment stop $name "power" $TAG_DIR
         cd $TAG_DIR/$name/power
 
+# Pause for 20 minutes to allow the safeguard to detect the threat
+sleep 20m
 # Call the detection script for safeguard
 ./power_detection.sh $SAFEGUARD
 

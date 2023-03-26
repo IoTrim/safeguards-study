@@ -1,5 +1,6 @@
 #!/bin/bash
 #using nmap for os scanning
+SAFEGUARD=$2
 
 
 #using nmap for the open port test
@@ -15,3 +16,9 @@ ip_address=$1
 
 # Run Nmap scan on target IP address
 nmap -O $ip_address
+
+
+# Pause for 20 minutes to allow the safeguard to detect the threat
+sleep 20m
+# Call the detection script for safeguard
+./os_scanning_detection.sh $SAFEGUARD
