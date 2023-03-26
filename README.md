@@ -20,7 +20,7 @@ The folder contains one subfolder for each safeguard we tested, containing their
 To run the threat scripts you will need to set up the testbed. 
 More details on each testbed component are presented below.
 
-<b>Gateway<\b>
+<b>Gateway</b>
 
 The gateway is configured using a NAT setup. It has two network interfaces, a WAN interface with a public IPv4 address outside of any firewall, and a LAN interface with private IP address, used to give NAT Internet connectivity to the safeguards.
 The gateway manages the network on its LAN interface, providing DHCP support, assigning private IP addresses and forwarding DNS queries to the ISP DNS servers, effectively trying to match the typical configuration of a home network environment by preventing direct access to its LAN interface, while allowing the safeguards full access to the Internet.
