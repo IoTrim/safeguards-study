@@ -14,7 +14,8 @@ Data are stored [here.](https://liveuclac-my.sharepoint.com/:f:/g/personal/uceea
 The folder contains one subfolder for each safeguard we tested, containing their packet captures for all the duration of our experiments.  
 
 HOW TO RUN THE SOFTWARE
-<img src="https://github.com/IoTrim/safeguards-study/blob/main/setup.jpg" width="500"/>
+
+<img src="https://github.com/IoTrim/safeguards-study/blob/main/setup" width="500"/>
 
 ## File Structure 
 
