@@ -1,7 +1,7 @@
 # Purpose of the code
 This is a Bash script designed to automatically switch off the Amazon Echo Dot to spoof Google behavior, inject Google Home traffic, and pause for a set time to allow for detection of the threat before calling a detection script.
 
-This code needs to be run in the <b>IoT Bridge<b>.
+This code needs to be run in the <b>IoT Bridge</b>.
 
 ## How to use the code
 
