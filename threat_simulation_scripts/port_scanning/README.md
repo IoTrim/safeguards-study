@@ -1,7 +1,7 @@
 # Purpose of the code
 This code demonstrates two methods of testing open ports on a target IP address. The first method uses the nc tool, which tests all ports from 0 to 65535 using a for loop. The second method uses the Nmap tool, which is a more comprehensive port scanner that provides additional information about the target system.
 
-This code needs to be run in the <b>Gateway</b> and in the <b>IoT Bridge<b>.
+This code needs to be run in the <b>Gateway</b> and in the <b>IoT Bridge</b>.
 
 ## Requirements
 - nc tool (usually pre-installed on Linux systems)
