@@ -1,7 +1,7 @@
 # Purpose of the code
 This Python code sends an HTTP POST with Personally identifiable information (PII) to an API endpoint with custom data in the request body. The code uses the http.client library to create an HTTP connection and send the request.
 
-This code needs to be run in the <b>IoT Bridge<\b>.
+This code needs to be run in the <b>IoT Bridge</b>.
 
 
 ## How to use the code
