@@ -3,12 +3,13 @@ This Python code uses the Scapy library to read a pcap file (a sample pcap from 
 DoH (DNS over HTTPS) requests made in the captured network traffic. It 
 extracts the destination IP address of the DoH server and prints it to the 
 console.
+This code needs to be run in the <b>Gateway</b>.
 
 ## How to use the code
 
 Install Scapy library using pip:
 
-pip install scapy
+```  pip install scapy ```
 
 Save the code in a Python file (e.g. doh_detection.py) and ensure that the pcap file to be analyzed is in the same directory as the Python file.
 
