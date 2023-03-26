@@ -16,6 +16,5 @@ Replace "bitdefender.pcap" in the code with the filename of the pcap file to be 
 
 Run the Python script:
 
-python doh_detection.py
+``` python doh_detection.py ```
 
-python doh_detection.py
