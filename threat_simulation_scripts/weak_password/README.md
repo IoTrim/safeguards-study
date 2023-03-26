@@ -1,7 +1,7 @@
 # Purpose of the code
 The script takes the FTP server address as a command-line argument and uses a predefined FTP user "admin" for the login attempt. The script reads a list of passwords from a file named "list_password"
 
-This code needs to be run in the <b>IoT Bridge<b>.
+This code needs to be run in the <b>IoT Bridge</b>.
 
 ## Requirements
 - FTP client (usually pre-installed on Linux systems)
