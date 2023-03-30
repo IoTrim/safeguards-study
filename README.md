@@ -28,7 +28,7 @@ The gateway is configured using a NAT setup. It has two network interfaces, a WA
 The gateway manages the network on its LAN interface, providing DHCP support, assigning private IP addresses and forwarding DNS queries to the ISP DNS servers.
 In addition to acting as gateway, the gateway is also responsible for capturing all the network traffic transiting through it using tcpdump, so that we track all the communication between the safeguard and the Internet using [Mon(IoT)r](https://github.com/IoTrim/safeguards-study/tree/main/moniotr).
 The gateway can selectively block certain traffic by resolving certain DNS request to 127.0.0.1 instead of forwarding them to the ISP DNS and/or blocking certain IP addresses using simple firewall rules.
-The gateway is also responsible for running certain \emph{threat scripts} to simulate threats originating from the Internet.
+The gateway is also responsible for running certain threat scripts to simulate threats originating from the Internet.
 Finally, the gateway is physically connected to an Android phone via the Android Debug Bridge, and has the possibility to control and retrieve data from the companion app of the safeguard.
 
 <b>Safeguard</b>
